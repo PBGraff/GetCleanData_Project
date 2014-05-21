@@ -86,4 +86,4 @@ tidyD$Activity <- rep(factor(seq(1,6),labels=activities[,2]),times=30)
 names(tidyD) <- names(D)
 
 # write tidy data
-write.csv(tidyD,file="tidyData.csv")
+write.csv(tidyD,file="tidyData.csv",row.names=FALSE)
