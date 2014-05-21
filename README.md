@@ -38,7 +38,7 @@ The mean and standard deviation for each of these variables has been averaged ov
 * STANDING
 * LAYING
 
-This results in 66 total variables, each with 180 values.
+This results in 66 total variables, each with 180 values. The variable names have been expanded for clarity.
 
 ## Organization of Tidy Data
 The mean over observations for the 66 variables are in the first 66 columns of the data set. The last 2 columns are factors describing the subject and the activity.
