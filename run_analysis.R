@@ -7,9 +7,8 @@
 # download and unzip file
 # comment out if not needed
 download.file(url="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip",
-              destfile="getdata_projectfiles_UCI_HAR_Dataset.zip",
-              method="curl")
-unzip("getdata_projectfiles_UCI_HAR_Dataset.zip")
+              destfile="UCI_HAR_Dataset.zip",method="curl")
+unzip("UCI_HAR_Dataset.zip")
 
 # read in feature names and activity label names
 features <- read.table("UCI HAR Dataset//features.txt",colClasses=c("integer","character"))
@@ -53,9 +52,9 @@ names(X) <- c("time.BodyAccel.X.mean","time.BodyAccel.Y.mean","time.BodyAccel.Z.
               "freq.BodyGyro.X.mean","freq.BodyGyro.Y.mean","freq.BodyGyro.Z.mean",
               "freq.BodyGyro.X.std","freq.BodyGyro.Y.std","freq.BodyGyro.Z.std",
               "freq.BodyAccel.mag.mean","freq.BodyAccel.mag.std",
-              "freq.BodyBodyAccelJerk.mag.mean","freq.BodyBodyAccelJerk.mag.std",
-              "freq.BodyBodyGyro.mag.mean","freq.BodyBodyGyro.mag.std",
-              "freq.BodyBodyGyroJerk.mag.mean","freq.BodyBodyGyroJerk.mag.std")
+              "freq.BodyAccelJerk.mag.mean","freq.BodyAccelJerk.mag.std",
+              "freq.BodyGyro.mag.mean","freq.BodyGyro.mag.std",
+              "freq.BodyGyroJerk.mag.mean","freq.BodyGyroJerk.mag.std")
 
 # combine into one data frame
 D <- cbind(X,subj,Y)
